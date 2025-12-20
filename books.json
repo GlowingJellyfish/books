@@ -111,6 +111,14 @@
         "max_depth": 652,
         "sri": "nxIaD6KHWtRWCjwK1WS4FffBMilSTT3psxwNSNtW/zSMMlI1n/m6dximaniQGGe4"
     },
+    "endgames_cdb95105.epd": {
+        "total": 107828,
+        "white": 53306,
+        "black": 54522,
+        "min_depth": 24,
+        "max_depth": 423,
+        "sri": "fN/3qVBEIEgHShovoRO3SEq5uikm8qlMNMIatUXdK3w4Y83rLZZjj3/+VzmPJEQ0"
+    },
     "FRC_openings.epd": {
         "total": 960,
         "white": 960,
