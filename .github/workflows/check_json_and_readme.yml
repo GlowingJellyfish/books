@@ -1,6 +1,8 @@
 # This workflow will run update_json.py and update_readme.py on the PR
 
 name: check books.json and README.md
+permissions:
+  contents: read
 on:
   push:
     branches:
