@@ -6,21 +6,21 @@ def pgn_to_epd(bookname):
     fens = []
     duplicates = []
     count = 0
-    pgn = open(bookname)
-    while True:
-        game = chess.pgn.read_game(pgn)
-        if game is None:
-            break
-        count += 1
-        board = game.board()
-        for move in game.mainline_moves():
-            board.push(move)
-        epd = board.epd()  # ignore move counters when checking for duplicates
-        if epd in epds:
-            duplicates.append(count)
-        else:
-            epds.add(epd)
-        fens.append(board.fen())
+    with open(bookname) as pgn:
+        while True:
+            game = chess.pgn.read_game(pgn)
+            if game is None:
+                break
+            count += 1
+            board = game.board()
+            for move in game.mainline_moves():
+                board.push(move)
+            epd = board.epd()  # ignore move counters when checking for duplicates
+            if epd in epds:
+                duplicates.append(count)
+            else:
+                epds.add(epd)
+            fens.append(board.fen())
 
     if duplicates:
         dstr = ",".join([str(g) for g in duplicates])
