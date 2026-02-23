@@ -30,7 +30,6 @@ def get_stats_and_sri(compressedbook, old_stats):
     max_depth = -1
     if book.endswith(".epd"):
         lines = content.splitlines()
-        total = len(lines)
 
         for line in lines:
             fields = line.split()
